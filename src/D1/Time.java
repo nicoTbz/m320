@@ -49,13 +49,31 @@ public class Time {
         setMinutes(minute);
         setSeconds(second);
     }
-    
-    public String toString(){
-        return getHours() + ":" + getMinutes() + ":" + getSeconds();
+
+    public String toString() {
+        return String.format("%02d:%02d:%02d", getHours(), getMinutes(), getSeconds());
     }
 
+
     public Time nextSecond() {
-        this.setTime(getHours(), getMinutes(), getSeconds() + 1);
+        int newSeconds = getSeconds() + 1;
+        int newMinutes = getMinutes();
+        int newHours = getHours();
+
+        if (newSeconds >= 60) {
+            newSeconds = 0;
+            newMinutes++;
+            if (newMinutes >= 60) {
+                newMinutes = 0;
+                newHours++;
+                if (newHours >= 24) {
+                    newHours = 0;
+                }
+            }
+        }
+
+        this.setTime(newHours, newMinutes, newSeconds);
         return this;
     }
+
 }
