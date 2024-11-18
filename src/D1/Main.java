@@ -1,4 +1,4 @@
-import D1.Time;
+package D1;
 
 public class Main {
     public static void main(String[] args) throws InterruptedException {
