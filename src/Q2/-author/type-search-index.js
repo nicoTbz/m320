@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"Alle Klassen und Schnittstellen","u":"allclasses-index.html"},{"p":"Q2","l":"Calculator"},{"p":"Q2","l":"InputHandler"},{"p":"Q2","l":"Main"}];updateSearchResults();

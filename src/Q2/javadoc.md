@@ -1,0 +1,1 @@
+C:\Users\nicom\.jdks\openjdk-23.0.1\bin\javadoc.exe -d -author -version Main.java Calculator.java InputHandler.java
