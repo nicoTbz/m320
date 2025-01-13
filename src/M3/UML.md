@@ -2,6 +2,7 @@
 config:
   theme: default
 ---
+
 classDiagram
   class StockExchange["StockExchange Interface"] {
     +getPrice(String symbol)
@@ -9,15 +10,15 @@ classDiagram
   class ZurichStockExchange["ZurichStockExchange"] {
     +getPrice(String symbol)
   }
-  StockExchange <|-- ZurichStockExchange
+  StockExchange <|.. ZurichStockExchange
   class NewYorkStockExchange["NewYorkStockExchange"] {
     +getPrice(String symbol)
   }
-  StockExchange <|-- NewYorkStockExchange
+  StockExchange <|.. NewYorkStockExchange
   class LondonStockExchange["LondonStockExchange"] {
     +getPrice(String symbol)
   }
-  StockExchange <|-- LondonStockExchange
+  StockExchange <|.. LondonStockExchange
   class Stock["Stock"] {
     -String symbol
     -int quantity
@@ -30,4 +31,4 @@ classDiagram
     +getTotalValue(StockExchange stockExchange)
     +printIndividualStockValues(StockExchange stockExchange)
   }
-  Portfolio "1" --> "*" Stock
+  Portfolio "0"*--"*" Stock
