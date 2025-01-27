@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Eine elegante, überarbeitete Todo-Liste mit Priorisierung und Sortierung">
+    <meta name="author" content="Dein Name">
+    <title>Erweiterte Todo-Liste</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="todo-icon.png" type="image/png">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="app-title">Elegante Todo-Liste</h1>
+            <p class="subtitle">Organisiere deinen Tag mit Stil</p>
+        </header>
+        <main>
+            <form id="todo-form" class="todo-form">
+                <div class="input-group">
+                    <input type="text" id="todo-input" placeholder="Neue Aufgabe eingeben..." required aria-label="Aufgabenbeschreibung">
+                    <select id="priority-select" aria-label="Priorität auswählen">
+                        <option value="niedrig">Niedrig</option>
+                        <option value="mittel">Mittel</option>
+                        <option value="hoch">Hoch</option>
+                    </select>
+                    <input type="date" id="date-input" required aria-label="Fälligkeitsdatum eingeben">
+                    <button type="submit" id="add-btn">Hinzufügen</button>
+                </div>
+            </form>
+            <div id="sort-buttons" class="button-group">
+                <button id="sort-priority" class="sort-btn">Nach Priorität sortieren</button>
+                <button id="sort-date" class="sort-btn">Nach Datum sortieren</button>
+            </div>
+            <section id="todo-section">
+                <ul id="todo-list" class="todo-list">
+                    <!-- Dynamische Inhalte werden hier eingefügt -->
+                </ul>
+            </section>
+        </main>
+        <footer>
+            <p>Erstellt mit Liebe zur Organisation | &copy; 2025</p>
+        </footer>
+    </div>
+    <script src="script.js" defer></script>
+</body>
+</html>
