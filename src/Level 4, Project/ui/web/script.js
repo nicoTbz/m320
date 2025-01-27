@@ -1,4 +1,4 @@
-const TodoApp = (() => {
+ const TodoApp = (() => {
   let todos = [];
 
   const addTodo = (event) => {
